@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface CertificateRepository extends JpaRepository<Certificate, Long> {
     Certificate findByQrId(String qrId);
+
 }
