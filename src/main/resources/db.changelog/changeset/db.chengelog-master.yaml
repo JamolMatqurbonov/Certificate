@@ -1,0 +1,3 @@
+databaseChengeLog:
+  -include:
+    file: db/chengelog/init_001_v.sql

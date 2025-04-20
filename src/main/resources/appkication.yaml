@@ -1,0 +1,4 @@
+minio.url=http://localhost:9000
+minio.access-key=minioadmin
+minio.secret-key=minioadmin
+minio.bucket=certificates
