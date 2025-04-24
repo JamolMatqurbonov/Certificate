@@ -1,3 +1,5 @@
+version: "3.8"
+
 services:
   postgres:
     image: postgres:15
@@ -24,6 +26,8 @@ services:
       - MINIO_ROOT_PASSWORD=password
     command:
       server --console-address :9001 /data
+    networks:
+      - base-network
 
 networks:
   base-network:

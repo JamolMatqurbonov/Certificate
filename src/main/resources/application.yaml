@@ -30,5 +30,5 @@ services:
     minio-host: https://localhost:9000
     access-key: user
     secret-key: password
-    bucket-name: user-project
+    bucket-name: corpbucket
     region: us-east-1

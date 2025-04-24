@@ -1,20 +1,6 @@
 package jamol.certificate.service;
 
-import com.itextpdf.text.Image; // ItextImage importi
-import java.awt.image.BufferedImage;
-import javax.imageio.ImageIO;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-
-import com.itextpdf.text.BadElementException;
-
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.EncodeHintType;
-import com.google.zxing.WriterException;
-import com.google.zxing.client.j2se.MatrixToImageWriter;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.qrcode.QRCodeWriter;
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.itextpdf.text.Image;
 import com.itextpdf.text.BadElementException;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
@@ -23,6 +9,14 @@ import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.EncodeHintType;
+import com.google.zxing.WriterException;
+import com.google.zxing.client.j2se.MatrixToImageWriter;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
+import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import jamol.certificate.dto.StudentReceiverDto;
 import jamol.certificate.entity.Certificate;
 import jamol.certificate.exception.CertificateNotFoundException;
@@ -31,12 +25,16 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Random;
 import java.util.UUID;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Slf4j
 @Service
